@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title>从回形针事件，窥见B站用户的群众心理 | 叶开未央</title>
+        <meta name="author" content="Kris Zhang" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="icon" href="/images/favicon.png" />
+        <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+                <div id="loading" v-show="loading">
+                    <div id="loading-circle">
+                        <h2>LOADING</h2>
+                        <p>稍等一会会哦 加载过慢请开启缓存 浏览器默认开启</p>
+                        <img src="/images/loading.gif" />
+                    </div>
+                </div>
+            </transition>
+            <nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <div id="desktop-menu">
+        <a class="title" href="/">
+            <span>叶开未央</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </div>
+    <div id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;叶开未央</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </div>
+</nav>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+            <transition name="into">
+                <div id="main" v-show="!loading">
+                    <div class="article">
+    <div>
+        <h1>从回形针事件，窥见B站用户的群众心理</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/6/22
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%9D%82%E8%B0%88/" style="color: #00a596">杂谈</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>回形针事件从2020年3月到现在已经过去了三年了，这三年里，回形针经历了被锤—回应—封杀，直到回形针被封杀，整件事才告一段落，笔者于2023年3月在B站发布了<a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv5245998">这篇文章</a>，期间收获了各种评论，既有理智讨论的，也有发泄情绪的，这里展示一部分：</p>
+<blockquote>
+<p>抛开汪精卫卖国不谈，谈中国人民对汪精卫态度的短视</p>
+<p>明眼人一看就知道，如果是失误，正能量澄清就完了。不澄清还遮遮掩掩！做视频怎么做也不能把地图这个最基本的东西做错！如果错为什么国内版不错？别洗了，这回形针有点意思。毕竟回形针许多自命清高的精英分子还年轻。老了才知道祖国的好。</p>
+<p>揣着明白装糊涂的代表。一堆废话也没敢说为什么这么多人突然声讨回形针。是因为它夹带私货，恶意污蔑中国。说别人只能看到他想看的同时想想你自己，指出回形针事实错误很早就有，只是当初声音小，你听不到。</p>
+<p>还乌合之众啊？建议看看观视频里花好几期讲这本书，b站的用户大体应该是人民群众，你这种自觉站在人民群众对立面的不要多说了8</p>
+<p>确实反感目前互联网非黑即白的畸形矫正情绪，博主这篇文章的内容我完全同意，很多人只是不愿意承认自己是乌合之众罢了，就回形针这件事来说，如果真要逼问他们：你觉得国土问题对你而言意味着什么？ 他们也未必可以真这么满腔热血地坚持，因为说到底，这不是涉及他们自己生活的一个问题，没人真正关心</p>
+<p>今天在别人视频底下刷到带节奏的，我还不明白，就来搜了下，搜到你的文章。乌合之众是一本好书，评论区有个人不看书，只看别人的视频，只看别人主观的视频，没有自己的独立思考。像这种up还有半佛回形针什么的。还有一个纯小丑，尤其是用户名，懒得说。乌合之众嘛，大众嘛，翻译的好啊，叫乌合之众。承认自己缺点是很难的，稍微戳到疼点就会开始骂你。而且结尾似乎解释了一段，其实看标题之后大概就该明白。显然评论区很多人没有看完文章，或者理解能力初中水平。然后还有一些说的话云里雾里的，其实杠的点不对，但是你和他显然没法讲理。其实从罗翔和张文宏的事件发生后，我就感觉可能因为疫情和国际形势，某些情绪被某些人故意煽动了起来。<br>大众的心理就是客观事实。学到了。我以前觉得可以修正。现在想想还是算了。从古至今成大事的人都擅长操纵大众的心理。除非人人都可以接受高等教育并且修身养性，不然乌合之众永远就是乌合之众，本质上似乎和古代的人也没有区别。</p>
+</blockquote>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p><strong>前记：虽然我们每个人都是独立的自主意识的存在，心理活动也由自己掌控，但是环境的改变，会让我们的心理认知、活动和决策发生很大改变。尤其是一种“群体”的环境下。群体心理与个体心理的表现不同主要原因在于，身处群体环境之下，每一个个体都获得了一种“法不责众”的放纵条件，并且激发出一种被群体认同的渴望。</strong></p>
+<p>3月22日，回形针在B站和YouTube上的视频被曝出“双标”，对待中国地图有不同，其中B站上的包含台湾省，YouTube上的则没有台湾省。</p>
+<p>写这个文章，并不想对回形针发表很多看法，而是想对这个事情下，群体表现出的心理现象发表些看法。</p>
+<p>22日晚，回形针就发布了声明，声明是因为视觉误差和工作疏忽导致的两个视频的不同，并承认了制作和工作流程上的错误。但许多网友们仿佛并不买账，各种质疑声此起彼伏。</p>
+<p>首先不评价这件事情中，回形针的视频到底是不是背景颜色的原因导致的地图缺失，因为这个涉及技术问题，很多网友拿出被压缩过画质的视频去做对比度分析从而反驳回形针，这是不严谨的，不能够起到证明或者反证的作用。（因为相同颜色或者模糊的纹理，会在视频压缩过程中被丢弃）</p>
+<p>我们只说下这个事情下反应的一些群体心理问题，有些心理问题可能在形成群体之前，在个体上就存在，但是在群体中被放大和加强。</p>
+<h2 id="群体心理现象一：我们只看到我们想看到的。"><a href="#群体心理现象一：我们只看到我们想看到的。" class="headerlink" title="群体心理现象一：我们只看到我们想看到的。"></a>群体心理现象一：我们只看到我们想看到的。</h2><p>很多网友们对待回形针的视频，只抓住了YouTube上3:01的看不到台湾省的地图不放，对于YouTube视频中出现的有台湾省的地图片段，避而不提，跟没看见一样。如果想说回形针为了“舔外网”，那么“舔”的是不是太不干净了？这个疑惑的问题，大多数网友显然没有时间去分析，或者不愿意去分析。（这里不是为回形针洗白，真相如何超过作者能力和本文讨论范畴。）</p>
+<p>为什么会对一些客观事实或者不能解释的事情避而不谈呢？原因就是，这个事实不能支撑我的论点。因为大多数网友认定了回形针“双标”，一种不把他打下来不罢休的态度，所以必然搜集所有能够支持这个目标的信息，而对于可能削弱这个目的的信息，当然选择性不提。这其实本质上也是“双标”，和一些网友批判“回形针的一些视频只说中国人吃肉，不说欧美人吃“一样。很多人在批判别人”双标“的时候，自己的论证却也避免不了”双标“。</p>
+<p>但是群体不是数学家，不会追求论证的严谨。只要有人选择性拿出一些证据，群体就会群起而攻，当中的大部分不会去验证证据的来源、严谨性，以及是否有其他反正存在。</p>
+<p><strong>”我们只看到我们想看到的“</strong>，这种心理现象不只是群体特有，放在个人身上也会有。我们为了支撑自己的论点，经常会选择性搜集一些能够支撑论点的论据，而对其他事实当作没看见（可能真没看见，又可能看见了但又不说）。毕竟，从初中开始，语文老师教我们写议论文就是这样。语文老师告诉我们写议论文的时候，爱迪生的勤奋和不怕失败造就了他的成功，可是跟你说过爱迪生背后有摩根财团的资本加持吗，跟你说过爱迪生刻意排挤和自己思路不符的特斯拉的故事吗？</p>
+<h2 id="群体心理现象二：群体中的每个个体，都努力追求群体的认同。"><a href="#群体心理现象二：群体中的每个个体，都努力追求群体的认同。" class="headerlink" title="群体心理现象二：群体中的每个个体，都努力追求群体的认同。"></a>群体心理现象二：群体中的每个个体，都努力追求群体的认同。</h2><p>昨天回形针的地图事件爆出来之后，又有网友们又翻出了回形针关于亚马逊雨林的视频，并对其质疑。</p>
+<p>这里由于专业领域的原因，作者不评价网友质疑的对错，这超出了作者的能力范围。我们关注的是，亚马逊雨林的视频早就出了，但网友们早不说晚不说，回形针出事了就拎出来。且不说谁对谁错，这个事情就反映出一种群体心理现象。</p>
+<p><strong>因为在舆论压力一边倒向回形针的群体形成之后，这个群体的每个成员都在试图寻找更多可能给予回形针更大压力的证据。为什么个体要费力去这样做呢？主要是想博得群体中其他成员，继而获得整个群体的认同。</strong>发表在网络上的舆论，被一堆网友点赞支持、评论被顶上去，是不是能给人带来很大程度的满足感与被认同感，甚至还有可能被推为这个群体的leader。</p>
+<p>同时这个追求认同的心理加强了上一个选择性论证的心理，个体在试图博得群体的认同的时候，都会更加选择性的搜集论据。因为提出不支持群体舆论风向的个体，会得到群体其他成员的漠视、反驳甚至攻击，如同出现一个异类一样，被无情的淘汰，这样的声音也得不到广播。如同进化原理一样，我们看到的舆论，是被群体筛选过活下来的舆论，而其中的一些多方位观点则被淘汰，我们无从得知。这也一方面解释了，为什么很多情况中，理性的声音会被淹没。因为在这个类似进化的过程中，”生存下来“的观点不是最严谨的、最理性的，而是最能适应群体舆论风向的（如同生物进化形成的各种性状，不是最优、最强大的解，而是适合环境能用就行的性状）。</p>
+<h2 id="群体心理现象三：群体心理的极端化趋势以及目的的短视性。"><a href="#群体心理现象三：群体心理的极端化趋势以及目的的短视性。" class="headerlink" title="群体心理现象三：群体心理的极端化趋势以及目的的短视性。"></a>群体心理现象三：群体心理的极端化趋势以及目的的短视性。</h2><p>相信读过《乌合之众》这本书的人，应该对这个现象并不陌生。群体的心理活动向来不会很温和的，而是各种极端。</p>
+<p>可以看到这次事件中，大部分网友们并没有想给回形针以改过自新的机会，仿佛目的就是把他干掉。但是干掉之后呢？如果他是一个试图分裂国家的博主，那么干掉就干掉了，但如果不是呢？如果真的只是因为过失呢？很多人并没有想过。</p>
+<p>这里不去判断回形针到底是个怎样的人，究竟是两面派还是真的过失。这里只说，在这次舆论风波中，大部分网友并没有理性的求证，而是在极端的情绪下，不听任何辩解、不尝试听道歉的声音。至于达成短期目的，即把回形针“干掉”之后，又怎样呢？以及这个目的是不是真的符合群体的价值观基础，都不去思考。</p>
+<h3 id="什么是群体？"><a href="#什么是群体？" class="headerlink" title="什么是群体？"></a>什么是群体？</h3><p>很多人不熟悉群体心理学或者《乌合之众》这本书的人，可能会对于网友为什么会构成一个群体有不理解。</p>
+<p>群体，不一定是要聚集在一起，像游行那样，才称之为群体。<strong>只要是被一种情绪所诱导，被共同的情绪组织在一起的个体，都可以是群体。至于组织形式是什么，是游行集会，还是微博知乎，无所谓。</strong></p>
+<hr>
+<p>最后，还是说下自己对于群体心理现象的认识。虽然以上论述，表现的可能是我在呼吁群体理性的思考，避免极端。但其实更应该认识到，这是不可能的。群体的这些心理就是客观事实，不会改变。很多事情，没有对与错，只有客观存在与否。<strong>我们必须承认客观事实</strong>。试图希望所有人都是理性的，这个想法本身就是不理性的。</p>
+<p>（文章尽可能用客观的语句去评述，比如并不是全盘认定所有网友的行为，而是用“大多数”、“部分”这样的限定词。）</p>
+<p>（并不针对回形针去评论，不去判断他的对错，也不去为他洗白。为自己的过失承担责任，是他自己的事情。）</p>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+                    <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 叶开未央
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Kris Zhang
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+        <div>
+            备案号：
+            
+            <a target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20230923">萌ICP备20230923号</a>
+            
+        </div>
+        
+    </div>
+</footer>
+
+                </div>
+            </transition>
+            
+            <transition name="fade">
+                <div id="preview" ref="preview" v-show="previewShow">
+                    <img id="preview-content" ref="previewContent" />
+                </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+        
+<script
+    src="https://giscus.app/client.js"
+    data-repo="krisaaka/giscus"
+    data-repo-id="R_kgDOJys83g"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOJys83s4CXZBo"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
+        
+        <canvas
+    id="fireworks"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"
+></canvas>
+<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+<script src="/js/fireworks.min.js"></script>
+<canvas
+    id="background"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"
+></canvas>
+<script src="/js/background.min.js"></script>
+
+    </body>
+</html>
