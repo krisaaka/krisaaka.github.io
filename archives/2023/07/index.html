@@ -3,7 +3,7 @@
 <html lang="zh">
     <head>
         <meta charset="utf-8" />
-        <title>测试博客 | 叶开未央</title>
+        <title>Archives | 叶开未央</title>
         <meta name="author" content="Kris Zhang" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -30,9 +30,7 @@
 
 
 
-
-
-
+<script src="/js/lib/search.js"></script>
 
 
 
@@ -145,48 +143,92 @@
 
             <transition name="into">
                 <div id="main" v-show="!loading">
-                    <div class="article">
-    <div>
-        <h1>测试博客</h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/6/20
-        </span>
+                    
+<div id="archives">
+    
+    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
+    
+    <div id="timeline-wrap" ref="timeline">
         
+        <div class="timeline" data-title="测试博客">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2023/6/20</div>
+                <a href="/2023/06/20/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/">
+                    <h3>测试博客</h3>
+                </a>
+                <div class="info">
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/test/" style="color: #00bcd4">test</a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
         
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/test/" style="color: #00a596">test</a>
-            </span>
-            
-        </span>
+        <div class="timeline" data-title="从回形针事件，窥见b站用户的群众心理">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2023/6/22</div>
+                <a href="/2023/06/22/%E4%BB%8E%E5%9B%9E%E5%BD%A2%E9%92%88%E4%BA%8B%E4%BB%B6%EF%BC%8C%E7%AA%A5%E8%A7%81B%E7%AB%99%E7%94%A8%E6%88%B7%E7%9A%84%E7%BE%A4%E4%BC%97%E5%BF%83%E7%90%86/">
+                    <h3>从回形针事件，窥见B站用户的群众心理</h3>
+                </a>
+                <div class="info">
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/%E6%9D%82%E8%B0%88/" style="color: #00bcd4">杂谈</a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="免费医疗在中国的可行性探讨">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2023/7/19</div>
+                <a href="/2023/07/19/%E5%85%8D%E8%B4%B9%E5%8C%BB%E7%96%97/">
+                    <h3>免费医疗在中国的可行性探讨</h3>
+                </a>
+                <div class="info">
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/%E8%8C%B6%E8%B0%88/" style="color: #ffa2c4">茶谈</a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
         
     </div>
-    
-    <div class="content" v-pre>
-        <p>振袖秋风问红叶，晚夜微雨问海棠<br>红叶开时，总多离别</p>
-
-    </div>
-    
-    
-    
-    
-    <div id="comment">
-        <div id="giscus-container" class="giscus"></div>
-    </div>
-    
-    
-    
-    
 </div>
 
                     <footer id="footer">
@@ -225,29 +267,6 @@
             
         </div>
         <script src="/js/main.js"></script>
-        
-        
-<script
-    src="https://giscus.app/client.js"
-    data-repo="krisaaka/giscus"
-    data-repo-id="R_kgDOJys83g"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOJys83s4CXZBo"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="zh-CN"
-    crossorigin
-    async
-></script>
-
-
-
-
-
         
         <canvas
     id="fireworks"
