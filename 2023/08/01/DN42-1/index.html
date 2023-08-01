@@ -1,0 +1,439 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title>DN42系列教程1——介绍与注册 | 叶开未央</title>
+        <meta name="author" content="Kris Zhang" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="icon" href="/images/favicon.png" />
+        <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+                <div id="loading" v-show="loading">
+                    <div id="loading-circle">
+                        <h2>LOADING</h2>
+                        <p>稍等一会会哦 加载过慢请开启缓存 浏览器默认开启</p>
+                        <img src="/images/loading.gif" />
+                    </div>
+                </div>
+            </transition>
+            <nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <div id="desktop-menu">
+        <a class="title" href="/">
+            <span>叶开未央</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </div>
+    <div id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;叶开未央</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </div>
+</nav>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+            <transition name="into">
+                <div id="main" v-show="!loading">
+                    <div class="article">
+    <div>
+        <h1>DN42系列教程1——介绍与注册</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/8/1
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/DN42/" style="color: #00bcd4">DN42</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>DN42 全称 Decentralized Network 42（42 号去中心网络），是一个大型、去中心化的 VPN 网络。但是与其它传统 VPN 不同的是，DN42 本身不提供 VPN 出口服务，即不提供规避网络审查、流媒体解锁等类似服务。相反，DN42 的目的是模拟一个互联网。它使用了大量在目前互联网骨干上应用的技术（例如 BGP 和递归 DNS），可以很好地模拟一个真实的网络环境。</p>
+<p>简而言之，DN42：</p>
+<ul>
+<li>不适合单纯想要保护隐私、规避网络审查的用户</li>
+<li>不适合在网内消耗大量流量，例如用于解锁流媒体服务的用户</li>
+<li>适合想要研究网络技术，练习服务器、路由器等网络设备配置，甚至后续在真实互联网建立 AS 的用户</li>
+<li>适合拥有真实 AS，但担心自己<a target="_blank" rel="noopener" href="https://blog.cloudflare.com/how-verizon-and-a-bgp-optimizer-knocked-large-parts-of-the-internet-offline-today/">配置错误广播出错误路由、干掉半个互联网</a>，希望有个地方测试的用户。</li>
+</ul>
+<p>正因为此，使用 DN42 的门槛比较高。就像在真实互联网中一样，你要扮演一个 ISP（互联网服务提供商），注册自己的个人信息，ASN 号码，IPv4 和 IPv6 的地址池，并且使用 BGP 在自己的服务器上广播它们。你还要和其它的用户联系，和他们做 Peering（对接），一步步进入完整的 DN42 网络。</p>
+<blockquote>
+<p>请注意：建立中国大陆到中国大陆以外的跨境 VPN 连接可能违反法律。请自行衡量其中的风险。</p>
+</blockquote>
+<p>DN42 在 172.20.0.0&#x2F;14 和 fd00::&#x2F;8 上运行，而这两个 IP 段都是分配给内网使用的。换句话说，你在 DN42 上怎么折腾，都不会影响到服务器其它的互联网连接。</p>
+<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ol>
+<li>你有一个 Linux 环境（双系统 &#x2F; 虚拟机 &#x2F; VPS 都可以）。</li>
+<li>你知道如何使用常见的 Linux 命令（例如 <code>cd</code>，<code>ls</code> 等），知道在你的 Linux 上安装软件包（<code>apt</code>，<code>yum</code> 等），以及会使用至少一个编辑器（图形化的 <code>gedit</code>、<code>vscode</code>，或者命令行的 <code>vim</code>、<code>nano</code> 都可以）。如果你不会，建议先阅读<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-tutorial.html">这份教程</a>。</li>
+<li>你知道 Git 版本管理工具的基本命令，例如 push&#x2F;pull&#x2F;commit。如果你不会，建议先阅读<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">这份教程</a>。</li>
+<li>你有一定程度的网络知识，知道 IP、MAC 地址是什么，知道交换机、路由器的工作原理，会在 Linux 下进行基本的网络调试（<code>ping</code>，<code>traceroute</code> 等），听说过 BGP&#x2F;OSPF 等动态路由协议。如果你不会，建议先阅读<a target="_blank" rel="noopener" href="https://www.cnblogs.com/whenyd/p/8440843.html">这份大纲</a>，并搜索大纲中提到的关键词学习相关知识。</li>
+<li>你有基本的英语阅读能力（用翻译软件也可以）。</li>
+</ol>
+<p>注意：请具有最基本的理解能力，否则你可能会给DN42网络中的其他人带去麻烦！！！</p>
+<p>你可以通过加入 <a target="_blank" rel="noopener" href="https://t.me/Dn42Chat">Telegram 群组</a> 或者 <a href="irc://irc.hackint.org/#dn42">IRC 频道</a> 来寻求帮助。</p>
+<p>请注意，DN42 是一个测试网络，所有人都在帮助所有人。即使你不小心搞砸了，也没有人会指责你。</p>
+<h2 id="注册流程"><a href="#注册流程" class="headerlink" title="注册流程"></a>注册流程</h2><blockquote>
+<h3 id="再次注意：DN42注册流程可能相对繁琐，这是为了尽可能真实的模拟现实互联网"><a href="#再次注意：DN42注册流程可能相对繁琐，这是为了尽可能真实的模拟现实互联网" class="headerlink" title="再次注意：DN42注册流程可能相对繁琐，这是为了尽可能真实的模拟现实互联网"></a>再次注意：DN42注册流程可能相对繁琐，这是为了尽可能真实的模拟现实互联网</h3><h3 id="由于本文无法做到随时更新，仅能保证在本文发布时的时效性，最新的注册流程请参考DN42的官方WIKI"><a href="#由于本文无法做到随时更新，仅能保证在本文发布时的时效性，最新的注册流程请参考DN42的官方WIKI" class="headerlink" title="由于本文无法做到随时更新，仅能保证在本文发布时的时效性，最新的注册流程请参考DN42的官方WIKI"></a>由于本文无法做到随时更新，仅能保证在本文发布时的时效性，最新的注册流程请参考<a target="_blank" rel="noopener" href="https://dn42.dev/howto/Getting-Started">DN42的官方WIKI</a></h3></blockquote>
+<p>在注册过程中会大量使用到一些 UNIX 工具（如 Git 、 GPG 等），所以最好使用 Linux 或者 macOS 系统完成整个流程，如果你正在使用 Windows 系统，那么可以使用 <a target="_blank" rel="noopener" href="http://aka.ms/wsl">WSL</a> 。</p>
+<p>1.首先去 <a target="_blank" rel="noopener" href="https://git.dn42.dev/">https://git.dn42.dev</a> 注册一个账户，打开 <a target="_blank" rel="noopener" href="https://git.dn42.dev/dn42/registry">dn42&#x2F;registry</a> 这个账户信息仓库，点右上角的 Fork，把仓库复制一份到你自己的账户</p>
+<p>2.然后找到一个地方，新建文件夹，我命名为 dn42，下文 dn42 皆指你创建的这个文件夹，所有操作都将在里面进行</p>
+<p>3.此时你应该已经进入了你自己账户里的那份复制，把它 Clone 下来。</p>
+<p>4.在 Clone 下的仓库里创建一系列的文件，但是请先注意：</p>
+<p><u>注释 1：Username 应该全大写！像 LONGTIANMU！</u><br><u>注释 2：所有内容严格匹配，前后都不能多 &#x2F; 少空格</u><br><u>注释 3：务必使用后文提到的查询器生成地址，否则容易撞</u><br><u>注释 4：GPG 签名需要先导入至 git</u><br><u>注释 5：remarks 没什么好写的就可以把 remarks 一整行删掉</u><br><u>注释 6：本文需要大量文本编辑操作，建议使用一个阳间的文本编辑器，否则你会像我一样反反复复出错</u></p>
+<p>5.在 <code>data/mntner</code> 文件夹下创建一个名为 <code>[Username]-MNT</code> 的文件，这个文件代表你的账户，用来认证你以后的操作。一份样例 mntner 文件如下：</p>
+<pre><code>mntner:             Username
+admin-c:            Username-DN42
+tech-c:             Username-DN42
+mnt-by:             Username-MNT
+source:             DN42
+auth:               pgp-fingerprint Key ID
+</code></pre>
+<ul>
+<li>mntner：即 <code>maintainer（维护者）</code>，说明这个账户的名称，与文件名相同。</li>
+<li>admin-c：即 <code>admin contact（管理员联系信息）</code>，需要指向后续创建的 person 文件，一般为 <code>[昵称]-DN42</code>。</li>
+<li>tech-c：即 <code>tech contact（技术员联系信息）</code>，需要指向后续创建的 person 文件，一般也为 <code>[昵称]-DN42</code>。</li>
+<li>mnt-by：即 <code>maintain by（由谁维护）</code>，指向这个账户本身，一般为 <code>[昵称]-MNT</code>。</li>
+<li>source：固定为 <code>DN42</code>。</li>
+<li>auth：你的个人认证信息。一般接受两种类型：GPG 公钥和 SSH 公钥。</li>
+</ul>
+<p>获取GPG公钥请参考 <a target="_blank" rel="noopener" href="https://docs.github.com/cn/authentication/managing-commit-signature-verification/generating-a-new-gpg-key">Github 的教程</a>与<a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2013/07/gpg.html">阮一峰的教程</a></p>
+<p>2.在 <code>data/person</code> 文件夹下创建一个 <code>[昵称]-DN42</code> 的文件，代表你的个人信息。这是一份样例文件：<code>data/person/Username-DN42</code>）：</p>
+<pre><code>person:             Username
+e-mail:             1145141919810@hotmail.com
+contact:            QQ/Telegram/Phone
+nic-hdl:            Username-DN42
+mnt-by:             Username-MNT
+source:             DN42
+</code></pre>
+<ul>
+<li>person：你的昵称。</li>
+<li>e-mail：你的邮箱。</li>
+<li>contact：可选，你的其它联系方式，例如 IRC、Telegram 等。</li>
+<li>nic-hdl：<code>NIC handle</code>，指向文件本身，与文件名相同，<code>[Username]-DN42</code>。</li>
+<li>mnt-by：<code>maintain by（由谁维护）</code>，由谁维护，指向你之前的 mntner 文件，<code>[Username]-MNT</code>。</li>
+<li>source：固定为 <code>DN42</code>。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://explorer.burble.com/free#/">请点击这里，查看DN42网络中的空闲AS号和IPV4&#x2F;IPV6地址</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.vultr.com/resources/subnet-calculator/">请点击查询IP CIDR转范围</a></p>
+<p>3.接下来你要给自己选择一个 AS 编号，即 ASN。在国际互联网上，ASN 范围 4200000000 – 4294967294 是被保留作私下使用（private use）的，DN42 占用的就是其中的一块，424242<strong>0000</strong> – 424242<strong>3999</strong>。<strong>（注意范围是 4000 个，不是 10000 个，剩下 6000 个暂未开放注册）</strong> 在这 4000 个号码中挑选一个你喜欢的，并且没有被占用的，然后进入 <code>data/aut-num</code> 文件夹，创建文件。假设我是 AS4242422382, 文件就是 <code>data/aut-num/AS4242422382</code></p>
+<pre><code>aut-num:            AS4242422382
+as-name:            Username-AS
+descr:              一段描述
+admin-c:            Username-DN42
+tech-c:             Username-DN42
+mnt-by:             Username-MNT
+source:             DN42
+</code></pre>
+<ul>
+<li>aut-num：AS 号。</li>
+<li>as-num：AS 的名称，一般只在 DN42 的一些网络结构示意图中看到。可以设置为 <code>[昵称]-AS</code>。</li>
+<li>descr：AS 简介，一般只在结构图中看到，随意填写。</li>
+<li>admin-c：<code>admin contact（管理员联系信息）</code>，指向你的 person 文件，<code>[Username]-DN42</code>。</li>
+<li>tech-c：<code>tech contact（技术员联系信息）</code>，指向你的 person 文件，<code>[Username]-DN42</code>。</li>
+<li>mnt-by：<code>maintain by（由谁维护）</code>，由谁维护，指向你之前的 mntner 文件，<code>[Username]-MNT</code>。</li>
+<li>source：固定为 <code>DN42</code>。</li>
+</ul>
+<p> 4.IP 选择环节了。进入 <code>data/inetnum</code> 文件夹，里面是所有已被注册的 IPv4 地址块信息。你需要在其中挑选一块空闲的地址块占为己用。以下是注意事项：</p>
+<p>和在真实互联网上一样，DN42 的 IPv4 地址资源也是十分紧缺的，因此 IPv4 的申请原则是「够用就好」。如果节点数量足够少，只申请 <code>/28</code> 或 <code>/29</code> 大小的地址块就够用了。</p>
+<p>在仓库的 <code>data/inetnum</code> 目录下新建一个文件，命名为 IP 地址块的 CIDR 格式，并使用 <code>_</code> 代替 <code>/</code>。</p>
+<pre><code>inetnum:            172.20.0.0 - 172.20.0.255
+netname:            Username-IPV4
+remarks:            随便写点
+descr:              随便写点
+country:            CN
+admin-c:            Username-DN42
+tech-c:             Username-DN42
+mnt-by:             Username-MNT
+nserver:            ns1.看注释.dn42
+nserver:            ns2.看注释.dn42
+status:             ASSIGNED
+cidr:               172.20.0.0/24
+source:             DN42
+</code></pre>
+<ul>
+<li>inetnum：你的这个地址块的范围，如果你不会算，那么可以根据你的地址块前后的用户推出，或者直接用 <a target="_blank" rel="noopener" href="https://www.vultr.com/resources/subnet-calculator/">IP 地址计算器</a>。</li>
+<li>netname：你的这个地址块的名称，没什么用，随便取（但一般建议保持 <code>[Username]-IPV4</code> 格式）。</li>
+<li>remarks：简介，随意填写，不晓得写啥记得去掉一整行。</li>
+<li>descr：简介，随意填写。</li>
+<li>country：你的国家代号，填 CN 代表中国大陆。</li>
+<li>admin-c：<code>admin contact（管理员联系信息）</code>，指向你的 person 文件，<code>[Username]-DN42</code>。</li>
+<li>tech-c：<code>tech contact（技术员联系信息）</code>，指向你的 person 文件，<code>[Username]-DN42</code>。</li>
+<li>mnt-by：<code>maintain by（由谁维护）</code>，由谁维护，指向你之前的 mntner 文件，<code>[Username]-MNT</code>。</li>
+<li>nserver：IP 地址反向解析的 DNS 服务器。如果你不知道这个是什么，或者不需要这个，可以去掉一整行。</li>
+<li>status：固定为 <code>ASSIGNED</code>。</li>
+<li>cidr：你的地址块的范围，与 <code>inetnum</code> 相同，只是以 CIDR 方式表示。</li>
+<li>source：固定为 <code>DN42</code>。</li>
+</ul>
+<p>5.添加你 IPv4 的路由，允许你的 AS 使用你申请的 v4 地址。在 <code>data/route</code> 文件夹创建对应文件，文中假设你的是 <code>data/route/172.20.0.0_24</code>，同前面 IPv4 地址的文件名，事实上 v6 也是如此，IP 与 route 文件名相同。</p>
+<pre><code>route:              172.20.0.0/24
+descr:              随便写点啥
+origin:             AS4242422382
+mnt-by:             Username-MNT
+source:             DN42
+</code></pre>
+<ul>
+<li>route：你的这个地址块的范围。</li>
+<li>descr：简介，随意填写，不能删。</li>
+<li>origin：你授权哪个 AS 使用这个地址块，填写你的 AS 编号。</li>
+<li>mnt-by：<code>maintain by（由谁维护）</code>，由谁维护，指向你之前的 mntner 文件，<code>[Username]-MNT</code>。</li>
+<li>source：固定为 <code>DN42</code>。</li>
+</ul>
+<p>鉴于已经 3202 年了，工信部都说要普及 IPv6 了，而且 DN42 内部 IPv6 普及率 &gt;&#x3D;100% 了，你也许该顺便注册下 IPv6，和上文 IPv4 两步骤基本相似。</p>
+<p>6.注册IPV6地址</p>
+<p>在国际互联网上， <code>fc00::/7</code> 是由 <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc4193">RFC4193</a> 定义的 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Unique_local_address">唯一本地地址</a>，而 DN42 占用的就是其中的一块： <code>fd00::/8</code> 。目前 DN42 开放注册的地址块范围可以在 <a target="_blank" rel="noopener" href="https://dn42.dev/howto/Address-Space#ipv6-address-space">Address Space</a> 页面上查看。</p>
+<p>在仓库的 <code>data/inet6num</code> 目录下新建一个文件，命名为 IPv6 地址块的 CIDR 格式，并使用 <code>_</code> 代替 <code>/</code></p>
+<pre><code>inet6num:           &lt;起始 IPv6 地址&gt; - &lt;结束 IPv6 地址&gt;
+cidr:               &lt;IPv6 地址块的 CIDR 格式&gt;
+netname:            &lt;IPv6 地址块名称&gt;
+descr:              &lt;IPv6 地址块简介&gt;
+country:            &lt;IPv6 地址块所属国家&gt;
+admin-c:            &lt;NIC 句柄&gt;
+tech-c:             &lt;NIC 句柄&gt;
+mnt-by:             &lt;维护者&gt;
+status:             ASSIGNED
+source:             DN42
+</code></pre>
+<ul>
+<li><code>inet6num</code> ：这个地址块的范围。</li>
+<li><code>cidr</code> ：使用 CIDR 格式表示的这个地址块的范围，含义与 <code>inet6num</code> 相同。</li>
+<li><code>netname</code> ：这个地址块的名称。可以设置为 <code>&lt;昵称&gt;-IPV6</code> 。</li>
+<li><code>descr</code> ：（选填）这个地址块的简介。</li>
+<li><code>nserver</code> ：（选填）IP 地址反向解析的 DNS 服务器。</li>
+<li><code>country</code> ：你的 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/ISO_3166">ISO 3166</a> 国家代码，填 <code>CN</code> 代表中国大陆地区。</li>
+<li><code>admin-c</code> ：管理员联系信息（Admin Contact），指向你在 <a target="_blank" rel="noopener" href="https://blog.baoshuo.ren/post/dn42-network/#%E6%B3%A8%E5%86%8C%E8%81%94%E7%B3%BB%E4%BA%BA">注册联系人</a> 一节中注册的 NIC 句柄。</li>
+<li><code>tech-c</code> ：技术员联系信息（Tech Contact），指向你在 <a target="_blank" rel="noopener" href="https://blog.baoshuo.ren/post/dn42-network/#%E6%B3%A8%E5%86%8C%E8%81%94%E7%B3%BB%E4%BA%BA">注册联系人</a> 一节中注册的 NIC 句柄。</li>
+<li><code>mnt-by</code> ：由谁维护（Maintain by），指向你在 <a target="_blank" rel="noopener" href="https://blog.baoshuo.ren/post/dn42-network/#%E6%B3%A8%E5%86%8C%E7%BB%B4%E6%8A%A4%E8%80%85">注册维护者</a> 一节中注册的的维护者信息。</li>
+<li><code>status</code> ：固定为 <code>ASSIGNED</code>。</li>
+<li><code>source</code> ：固定为 <code>DN42</code>。</li>
+</ul>
+<p>7.为你的 IPv6 地址块添加路由，在 <code>data/route6</code> 创建一个与上面你选择的同名的文件即可。</p>
+<pre><code>route6:             fd7a:f946:6722: :0/48
+descr:              &lt;IPv6 地址块的 CIDR 格式&gt;
+origin:             AS4242422382
+mnt-by:             Username-MNT
+source:             DN42
+</code></pre>
+<p>8.起来喝口水休息一下，马上搞定了</p>
+<h2 id="Git上传你的文件"><a href="#Git上传你的文件" class="headerlink" title="Git上传你的文件"></a>Git上传你的文件</h2><p>完成以上步骤之后，使用 <code>git diff</code> 查看文件变动，检查无误后，使用 <code>git add .</code> 暂存。</p>
+<p>运行仓库根目录下的 <code>./check-my-stuff &lt;维护者&gt;</code> 检查文件内容是否有误，确定无误后，提交。</p>
+<p>在提交时，如果需要使用 GPG 签名，需要在添加 <code>-S</code> 参数，如 <code>git commit -S</code> ；如果使用 SSH 签名，请直接使用 <code>git commit</code> 进行提交，待提交后再进行签名工作。</p>
+<blockquote>
+<p>签名失败怎么办<br>这很有可能是因为您没有导入 GPG 密钥到 git。<br>首先 <code>git config --global user.signingkey 之前创建的Key ID</code><br>然后 <code>export GPG_TTY=$(tty)</code><br>现在，您应该可以创建了</p>
+</blockquote>
+<p>如果你前面已经 commit 过几次了，你可以执行 <code>git commit *--amend -S*</code> 修改之前的 commit，将其签名。</p>
+<p>执行 <code>git push -f</code> 将修改上传到 Git 服务器。</p>
+<p>现在，回到 <a target="_blank" rel="noopener" href="https://git.dn42.dev/dn42/registry">dn42&#x2F;registry</a>，发起 Pull Request，等待你的信息被合并。</p>
+<p>PR 通过后，你就正式拥有自己的地址啦！并且可以和别人 peer！</p>
+<h1 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h1>
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+                    <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 叶开未央
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Kris Zhang
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+        <div>
+            备案号：
+            
+            <a target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20230923">萌ICP备20230923号</a>
+            
+        </div>
+        
+    </div>
+</footer>
+
+                </div>
+            </transition>
+            
+            <transition name="fade">
+                <div id="preview" ref="preview" v-show="previewShow">
+                    <img id="preview-content" ref="previewContent" />
+                </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+        
+<script
+    src="https://giscus.app/client.js"
+    data-repo="krisaaka/giscus"
+    data-repo-id="R_kgDOJys83g"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOJys83s4CXZBo"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
+        
+        <canvas
+    id="fireworks"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"
+></canvas>
+<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+<script src="/js/fireworks.min.js"></script>
+<canvas
+    id="background"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"
+></canvas>
+<script src="/js/background.min.js"></script>
+
+    </body>
+</html>
